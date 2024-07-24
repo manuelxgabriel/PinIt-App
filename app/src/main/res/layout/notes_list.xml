@@ -23,7 +23,7 @@
 
             <TextView
                 android:id="@+id/textView_title"
-                android:text="Title"
+                android:text="@string/notes_title"
                 android:layout_alignParentStart="true"
                 android:textSize="18sp"
                 android:textColor="@color/black"
@@ -39,8 +39,6 @@
             <ImageView
                 android:id="@+id/imageView_pin"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_pin"
-
                 android:layout_width="20dp"
                 android:layout_height="20dp"/>
 
@@ -48,8 +46,8 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/txtView_notes"
-            android:text="Notes."
+            android:id="@+id/textView_notes"
+            android:text="@string/notes_body"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="normal"
@@ -60,8 +58,8 @@
         />
 
         <TextView
-            android:id="@+id/txtView_date"
-            android:text="Date"
+            android:id="@+id/textView_date"
+            android:text="@string/date"
             android:textColor="@color/light_grey"
             android:singleLine="true"
             android:ellipsize="marquee"
