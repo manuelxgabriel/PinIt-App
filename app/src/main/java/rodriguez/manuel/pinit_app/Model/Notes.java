@@ -10,10 +10,8 @@ import java.io.Serializable;
 public class Notes implements Serializable {
     @PrimaryKey(autoGenerate = true)
     int ID = 0;
-
     @ColumnInfo(name = "title")
      String title = "";
-
 
     @ColumnInfo(name = "notes")
     String notes = "";
