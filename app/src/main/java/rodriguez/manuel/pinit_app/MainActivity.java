@@ -1,5 +1,6 @@
 package rodriguez.manuel.pinit_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 
@@ -57,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(Notes notes) {
-
+            Intent noteTakingActivity = new Intent(MainActivity.this, NoteTakingActivity.class);
+            startActivity(noteTakingActivity);
         }
 
         @Override

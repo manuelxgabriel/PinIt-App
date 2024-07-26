@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PinIt-App</string>
+    <string name="add_title">Title</string>
+    <string name="add_notes">Add Notes</string>
 </resources>
