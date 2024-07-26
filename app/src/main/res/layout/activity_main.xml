@@ -8,6 +8,7 @@
     android:background="@color/light_grey"
     tools:context=".MainActivity">
 
+<<<<<<< HEAD
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_home"
         android:layout_margin="8dp"
@@ -24,5 +25,47 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add"
     />
+=======
+    <LinearLayout
+        android:id="@+id/navList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pinit App"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="12dp"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteRv"
+        android:layout_below="@+id/navList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        android:layout_above="@+id/addBtn"
+    />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="24dp"
+        android:src="@drawable/ic_add"
+        />
+>>>>>>> work
 
 </RelativeLayout>

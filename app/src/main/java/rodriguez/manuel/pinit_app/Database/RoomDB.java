@@ -6,6 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+<<<<<<< HEAD
 import rodriguez.manuel.pinit_app.Models.Notes;
 
 /**
@@ -32,17 +33,36 @@ public abstract class RoomDB extends RoomDatabase {
                     .allowMainThreadQueries() // Allow queries on the main thread
                     .fallbackToDestructiveMigration() // Handle schema migration
                                                     // by destroying and recreating the database
+=======
+import rodriguez.manuel.pinit_app.Model.Notes;
+
+@Database(entities = Notes.class, version = 1, exportSchema = false)
+public abstract class RoomDB extends RoomDatabase {
+
+    private static RoomDB database;
+    private static String DATABASE_NAME = "PINITAPP";
+
+    public synchronized static RoomDB getInstance(Context context){
+        if(database == null){
+            database = Room.databaseBuilder(context.getApplicationContext(),
+                    RoomDB.class, DATABASE_NAME)
+                    .allowMainThreadQueries()
+                    .fallbackToDestructiveMigration()
+>>>>>>> work
                     .build();
         }
         return database;
     }
 
+<<<<<<< HEAD
 
     /**
      * Provides access to the MainDAO data access object.
      * This method allows interaction with the Notes data operations.
      * @return the MainDAO instance for database operations.
      */
+=======
+>>>>>>> work
     public abstract MainDAO mainDAO();
 
 }
