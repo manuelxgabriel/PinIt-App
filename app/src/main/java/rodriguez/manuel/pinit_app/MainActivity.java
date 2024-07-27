@@ -7,15 +7,7 @@ import android.widget.LinearLayout;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-<<<<<<< HEAD
-import androidx.recyclerview.widget.RecyclerView;
-
-public class MainActivity extends AppCompatActivity {
-
-=======
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -37,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
     RoomDB database;
     List<Notes> notes = new ArrayList<>();
     FloatingActionButton fabtn;
->>>>>>> work
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
     public void updateRecycle(List<Notes> notes){
         recycleView.setHasFixedSize(true);
         recycleView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
-        noteListAdapter = new NoteListAdapter(MainActivity.this, notes,notesClickListener);
-        recycleView.setAdapter((noteListAdapter));
+        noteListAdapter = new NoteListAdapter(MainActivity.this, notes, notesClickListener);
+        recycleView.setAdapter(noteListAdapter);
     }
 
-    private final NotesClickListener notesClickListener = new NotesClickListener(){
+    private final NotesClickListener notesClickListener = new NotesClickListener() {
 
         @Override
         public void onClick(Notes notes) {
@@ -73,7 +63,5 @@ public class MainActivity extends AppCompatActivity {
         public void onLongPress(Notes notes, CardView cardview) {
 
         }
-
     };
-
 }

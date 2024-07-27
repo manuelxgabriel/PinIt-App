@@ -1,11 +1,9 @@
 <resources>
     <string name="app_name">PinIt-App</string>
-<<<<<<< HEAD
     <string name="notes_title">Title</string>
     <string name="notes_body">Note.</string>
     <string name="date">Date</string>
-=======
+
     <string name="add_title">Title</string>
     <string name="add_notes">Add Notes</string>
->>>>>>> work
 </resources>

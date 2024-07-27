@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import rodriguez.manuel.pinit_app.Models.Notes;
+import rodriguez.manuel.pinit_app.Model.Notes;
 import rodriguez.manuel.pinit_app.NotesClickListener;
 import rodriguez.manuel.pinit_app.R;
 
@@ -78,7 +78,7 @@ public class NotesListAdapter extends RecyclerView.Adapter<NotesViewHolder> {
         holder.textView_date.setSelected(true);
 
         // Set pin icon if the note is pinned
-        if(list.get(position).isPinned()){
+        if(list.get(position).getPinned()){
             holder.imageView_pin.setImageResource(R.drawable.ic_pin);
         } else {
             holder.imageView_pin.setImageResource(0);
